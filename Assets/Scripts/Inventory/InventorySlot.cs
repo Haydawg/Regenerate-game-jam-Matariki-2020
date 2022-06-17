@@ -116,7 +116,8 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler, IPointerEnterH
 
     public void OnDrop(PointerEventData eventData)
     {
-        Debug.Log(eventData);
+        if(eventData.pointerDrag)
+        Debug.Log(eventData.pointerDrag);
         if (OnDropEvent != null)
             OnDropEvent(this);
     }
