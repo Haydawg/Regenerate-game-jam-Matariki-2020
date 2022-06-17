@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     Animator animator;
     [SerializeField]
     float speed;
+
+    public List<Item> items;
     // Start is called before the first frame update
     void Start()
     {
@@ -56,4 +58,6 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("Is Moving", (x != 0 | z != 0));
         animator.SetInteger("Direction", direction);
     }
+
+
 }
