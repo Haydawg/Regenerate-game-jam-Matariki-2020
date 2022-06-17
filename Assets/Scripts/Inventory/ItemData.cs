@@ -10,6 +10,7 @@ public class ItemData : ScriptableObject
     public string name;
     public Sprite sprite;
     public int stackLimit;
+    public Item item;
 
     [ContextMenu("Generate Id")]
     private void GenerateId()
