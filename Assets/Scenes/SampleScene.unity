@@ -552,6 +552,7 @@ GameObject:
   - component: {fileID: 1690817460}
   - component: {fileID: 1690817459}
   - component: {fileID: 1690817458}
+  - component: {fileID: 1690817461}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -617,6 +618,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1690817461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690817457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51222c189612f474685c1b457baaf0f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - {fileID: 1789926771105313481, guid: 6339fa5e04201f2409b56b1e8ab02255, type: 3}
 --- !u!1 &1823728609
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,6 +770,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1935757609}
   speed: 5
+  items:
+  - {fileID: 1789926771105313481, guid: 6339fa5e04201f2409b56b1e8ab02255, type: 3}
 --- !u!212 &1935757604
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -872,6 +889,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4ed5754bd69113e4b93908b59b982a94, type: 2}
   - {fileID: 11400000, guid: 509e1c37e3e693b4b946e93e8a74ca43, type: 2}
   - {fileID: 11400000, guid: 509e1c37e3e693b4b946e93e8a74ca43, type: 2}
+  - {fileID: 11400000, guid: deb1b0d59c6f70c46b03afefc40b4a89, type: 2}
 --- !u!95 &1935757609
 Animator:
   serializedVersion: 3
