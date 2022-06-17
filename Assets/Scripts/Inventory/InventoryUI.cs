@@ -23,7 +23,6 @@ public class InventoryUI : MonoBehaviour
     public List<InventorySlot> inventorySlots = new List<InventorySlot>();
     public Inventory inventory;
 
-    public GameObject inventoryUI;
     public GameObject layout;
 
     

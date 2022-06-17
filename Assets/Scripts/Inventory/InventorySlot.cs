@@ -95,9 +95,12 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler, IPointerEnterH
     public void OnEndDrag(PointerEventData eventData)
     {
         isDragging = false;
-
-        if (inventoryItem != null)
-            icon.color = normalColor;
+        RaycastHit hit;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out hit))
+            if (hit.collider.gameObject.GetComponent<IItemInteraction>() != null) 
+                if (hit.collider.gameObject.GetComponent<IItemInteraction>().CanInteract(inventoryItem.itemData.item))
+                    inventoryItem.itemData.item.UseItem(hit.point);
 
         if (OnEndDragEvent != null)
         {
@@ -116,8 +119,9 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler, IPointerEnterH
 
     public void OnDrop(PointerEventData eventData)
     {
-        Debug.Log(eventData);
+        if(eventData.pointerDrag)
+        Debug.Log(eventData.pointerDrag);
         if (OnDropEvent != null)
-            OnDropEvent(this);
+            gameObject.transform.position = Input.mousePosition;
     }
 }
