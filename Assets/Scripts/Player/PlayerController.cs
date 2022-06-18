@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     float speed;
 
-    public List<Item> items;
+    //public List<Item> items;
     // Start is called before the first frame update
     void Start()
     {

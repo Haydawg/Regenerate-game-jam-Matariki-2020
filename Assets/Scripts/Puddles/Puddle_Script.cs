@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Puddle_Script : MonoBehaviour
+public class Puddle_Script : MonoBehaviour, IItemInteraction
 {
     Vector2 HorizontalDirection;
     GameObject WantedTorch;
+    [SerializeField]
+    List<Item> items;
     IEnumerator MovementStateMachine()
     {
         WantedTorch = null;
@@ -54,5 +56,11 @@ public class Puddle_Script : MonoBehaviour
         HorizontalDirection = new Vector2(collision.contacts[0].normal.x, collision.contacts[0].normal.z).normalized * 0.002f;
     }
 
-
+    public bool CanInteract(Item item)
+    {
+        if (items.Contains(item))
+            return true;
+        else
+            return false;
+    }
 }

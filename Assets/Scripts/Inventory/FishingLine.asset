@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d68519253759d947a681216b92ea104, type: 3}
+  m_Name: FishingLine
+  m_EditorClassIdentifier: 
+  itemID: dfb9984d-d052-4771-bfcd-72ec34799af7
+  name: Fishing Line
+  sprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+  stackLimit: 1
+  item: {fileID: -8925922269945367502, guid: 45424f7a9b594704a9f7f460106dc93c, type: 3}
