@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         playerVelocity += (transform.forward * z * speed * Time.deltaTime);
         playerVelocity += (transform.right * x * speed * Time.deltaTime);
-        controller.Move(playerVelocity);
+        
 
         // Direction for animation
         if (x == 0 & z > 0)
@@ -79,6 +79,8 @@ public class PlayerController : MonoBehaviour
         //Set animation variables
         animator.SetBool("Is Moving", (x != 0 | z != 0));
         animator.SetInteger("Direction", direction);
+
+        controller.Move(playerVelocity);
     }
 
 
