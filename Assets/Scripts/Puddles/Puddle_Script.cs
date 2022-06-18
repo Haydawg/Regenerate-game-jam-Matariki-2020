@@ -24,9 +24,9 @@ public class Puddle_Script : MonoBehaviour, IItemInteraction
 
     }
 
-    private void OnDestroy()
+    private void OnDisable()
     {
-        BarMinigameScript.OnSuccess += Catch;
+        BarMinigameScript.OnSuccess -= Catch;
         BarMinigameScript.OnFail -= Release;
     }
 
