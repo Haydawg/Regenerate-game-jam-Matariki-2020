@@ -8,7 +8,9 @@ public class CameraController : MonoBehaviour
 
     public float turnSpeed = 10.0f;
 
+    [SerializeField]
     float height = 3f;
+    [SerializeField]
     float distance = 5f;
     Vector3 offset;
 

@@ -12,6 +12,11 @@ public class BarMinigameScript : MonoBehaviour
     float gamepos;
     float leftSpot;
     float rightSpot;
+
+    public static event HandleSuccess OnSuccess;
+    public delegate void HandleSuccess();
+    public static event HandleFail OnFail;
+    public delegate void HandleFail();
     // Start is called before the first frame update
     void Start()
     {
@@ -32,9 +37,27 @@ public class BarMinigameScript : MonoBehaviour
     {
         gamepos = 0.5f+0.5f*Mathf.Sin(Time.time * 3);
         MainSlider.GetComponent<Slider>().value = gamepos;
-        if(Input.GetKeyDown(KeyCode.Space) &&  leftSpot <= gamepos && gamepos <= rightSpot)
+        if(Input.GetKeyDown(KeyCode.Space))
         {
-            GameObject.Destroy(gameObject, 1.2f);
+            if (leftSpot <= gamepos && gamepos <= rightSpot)
+                Succeess();
+            else
+                Failure();
         }
+       
+    }
+    public void Succeess()
+    {
+        OnSuccess.Invoke();
+        Debug.Log("Caught fish");
+        GameObject.Destroy(gameObject, 0.2f);
+
+    }
+    public void Failure()
+    {
+        OnFail.Invoke();
+        Debug.Log("Fish escaped");
+        GameObject.Destroy(gameObject, 0.2f);
+
     }
 }

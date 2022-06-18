@@ -15,7 +15,7 @@ public class Item : MonoBehaviour
     {
         
     }
-    public virtual void UseItem(Vector3 targetPos)
+    public virtual void UseItem(Vector3 targetPos, IItemInteraction interaction)
     {
 
 

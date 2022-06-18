@@ -8,6 +8,7 @@ public class Puddle_Script : MonoBehaviour, IItemInteraction
     GameObject WantedTorch;
     [SerializeField]
     List<Item> items;
+    public bool isHooked;
     IEnumerator MovementStateMachine()
     {
         WantedTorch = null;
@@ -16,7 +17,18 @@ public class Puddle_Script : MonoBehaviour, IItemInteraction
         StartCoroutine("MovementStateMachine");
     }
 
+    private void OnEnable()
+    {
+        BarMinigameScript.OnSuccess += Catch;
+        BarMinigameScript.OnFail += Release;
 
+    }
+
+    private void OnDestroy()
+    {
+        BarMinigameScript.OnSuccess += Catch;
+        BarMinigameScript.OnFail -= Release;
+    }
 
     IEnumerator TorchStateMachine()
     {
@@ -41,14 +53,18 @@ public class Puddle_Script : MonoBehaviour, IItemInteraction
     // Update is called once per frame
     void Update()
     {
-        if (WantedTorch == null)
+        if (!isHooked)
         {
-            transform.Translate(new Vector3(HorizontalDirection.x, HorizontalDirection.y, 0));
+            if (WantedTorch == null)
+            {
+                transform.Translate(new Vector3(HorizontalDirection.x, HorizontalDirection.y, 0));
+            }
+            else
+            {
+                transform.position = Vector3.Lerp(transform.position, WantedTorch.transform.position, 0.0006f);
+            }
         }
-        else
-        {
-            transform.position = Vector3.Lerp(transform.position, WantedTorch.transform.position, 0.0006f);
-        }
+
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -56,11 +72,31 @@ public class Puddle_Script : MonoBehaviour, IItemInteraction
         HorizontalDirection = new Vector2(collision.contacts[0].normal.x, collision.contacts[0].normal.z).normalized * 0.002f;
     }
 
-    public bool CanInteract(Item item)
+    public bool CanInteract(Item item, out IItemInteraction interaction)
     {
         if (items.Contains(item))
+        {
+            interaction = this;
             return true;
+        }
         else
+        {
+            interaction = null;
             return false;
+        }
+
+    }
+    public void Catch()
+    {
+        if (isHooked)
+        {
+            Debug.Log("Caught");
+            Destroy(gameObject);
+        }
+    }
+    public void Release()
+    {
+        if (isHooked)
+            isHooked = false;
     }
 }

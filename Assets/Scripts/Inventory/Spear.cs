@@ -15,7 +15,7 @@ public class Spear : Item
     {
         
     }
-    public override void UseItem(Vector3 targetPos)
+    public override void UseItem(Vector3 targetPos, IItemInteraction interaction)
     {
         Debug.Log(true);
 

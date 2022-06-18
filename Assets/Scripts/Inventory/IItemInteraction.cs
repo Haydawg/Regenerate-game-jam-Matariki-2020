@@ -4,7 +4,7 @@ using UnityEngine;
 
 public interface IItemInteraction 
 {
-    public bool CanInteract(Item item);
+    public bool CanInteract(Item item, out IItemInteraction interaction);
 
         
 }

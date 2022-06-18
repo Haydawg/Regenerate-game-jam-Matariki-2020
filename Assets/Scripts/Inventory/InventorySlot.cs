@@ -98,10 +98,12 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler, IPointerEnterH
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hit))
-            if (hit.collider.gameObject.GetComponent<IItemInteraction>() != null) 
-                if (hit.collider.gameObject.GetComponent<IItemInteraction>().CanInteract(inventoryItem.itemData.item))
-                    inventoryItem.itemData.item.UseItem(hit.point);
-
+            if (hit.collider.gameObject.GetComponent<IItemInteraction>() != null)
+            {
+                IItemInteraction interaction = null;
+                if (hit.collider.gameObject.GetComponent<IItemInteraction>().CanInteract(inventoryItem.itemData.item, out interaction))
+                    inventoryItem.itemData.item.UseItem(hit.point, interaction);
+            }
         if (OnEndDragEvent != null)
         {
             icon.transform.position = originalPosition;

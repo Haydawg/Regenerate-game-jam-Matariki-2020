@@ -15,7 +15,7 @@ public class Torch : Item
     {
         
     }
-    public override void UseItem(Vector3 targetPos)
+    public override void UseItem(Vector3 targetPos, IItemInteraction interaction)
     {
         Instantiate(gameObject, targetPos, Quaternion.identity);
     }
