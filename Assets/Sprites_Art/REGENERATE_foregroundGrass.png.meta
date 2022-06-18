@@ -1,7 +1,145 @@
 fileFormatVersion: 2
 guid: 26edd5b23d049d142bc565d081f924fc
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -451065742576793642
+    second: foregroundGrass
+  - first:
+      213: 5634085678134414493
+    second: REGENERATE_foregroundGrass_1
+  - first:
+      213: -1093051479074946107
+    second: REGENERATE_foregroundGrass_2
+  - first:
+      213: 3591189328195039417
+    second: REGENERATE_foregroundGrass_3
+  - first:
+      213: 2064509922655655396
+    second: REGENERATE_foregroundGrass_4
+  - first:
+      213: -1037470966887670506
+    second: REGENERATE_foregroundGrass_5
+  - first:
+      213: -9201318870613476378
+    second: REGENERATE_foregroundGrass_6
+  - first:
+      213: 901061293839811067
+    second: REGENERATE_foregroundGrass_7
+  - first:
+      213: 517497917099166261
+    second: REGENERATE_foregroundGrass_8
+  - first:
+      213: -780886079400126290
+    second: REGENERATE_foregroundGrass_9
+  - first:
+      213: -5527798544791321705
+    second: REGENERATE_foregroundGrass_10
+  - first:
+      213: -95452128062226138
+    second: REGENERATE_foregroundGrass_11
+  - first:
+      213: -8587168417776441120
+    second: REGENERATE_foregroundGrass_12
+  - first:
+      213: -479922449264343689
+    second: REGENERATE_foregroundGrass_13
+  - first:
+      213: -2051725750539815657
+    second: REGENERATE_foregroundGrass_14
+  - first:
+      213: 6459237405801329102
+    second: REGENERATE_foregroundGrass_15
+  - first:
+      213: 9058072984814642914
+    second: REGENERATE_foregroundGrass_16
+  - first:
+      213: 6194971193485173146
+    second: REGENERATE_foregroundGrass_17
+  - first:
+      213: 8213262535752288597
+    second: REGENERATE_foregroundGrass_18
+  - first:
+      213: -1634079654777310142
+    second: REGENERATE_foregroundGrass_19
+  - first:
+      213: 2378887176093600057
+    second: REGENERATE_foregroundGrass_20
+  - first:
+      213: 3664952761050010086
+    second: REGENERATE_foregroundGrass_21
+  - first:
+      213: 2178024035627628687
+    second: REGENERATE_foregroundGrass_22
+  - first:
+      213: 5144883187214299948
+    second: REGENERATE_foregroundGrass_23
+  - first:
+      213: -859558462228124537
+    second: REGENERATE_foregroundGrass_24
+  - first:
+      213: 875430061183223578
+    second: REGENERATE_foregroundGrass_25
+  - first:
+      213: -6804554283810234431
+    second: REGENERATE_foregroundGrass_26
+  - first:
+      213: -8815849959731508997
+    second: REGENERATE_foregroundGrass_27
+  - first:
+      213: 6251055424475331494
+    second: REGENERATE_foregroundGrass_28
+  - first:
+      213: -5655577300766826670
+    second: REGENERATE_foregroundGrass_29
+  - first:
+      213: 5847720579099573940
+    second: REGENERATE_foregroundGrass_30
+  - first:
+      213: -7033812238210095610
+    second: REGENERATE_foregroundGrass_31
+  - first:
+      213: 1914765698500884752
+    second: REGENERATE_foregroundGrass_32
+  - first:
+      213: -6684608728601998452
+    second: REGENERATE_foregroundGrass_33
+  - first:
+      213: -1184859731587716850
+    second: REGENERATE_foregroundGrass_34
+  - first:
+      213: 476444556487028506
+    second: REGENERATE_foregroundGrass_35
+  - first:
+      213: 4225842429545620154
+    second: REGENERATE_foregroundGrass_36
+  - first:
+      213: 2849515329439693291
+    second: REGENERATE_foregroundGrass_37
+  - first:
+      213: -7277592863562629124
+    second: REGENERATE_foregroundGrass_38
+  - first:
+      213: 6583354874938384298
+    second: REGENERATE_foregroundGrass_39
+  - first:
+      213: -5551380983511488502
+    second: REGENERATE_foregroundGrass_40
+  - first:
+      213: 6874646241035558181
+    second: REGENERATE_foregroundGrass_41
+  - first:
+      213: -3724440368198755232
+    second: REGENERATE_foregroundGrass_42
+  - first:
+      213: -3534842555673312016
+    second: REGENERATE_foregroundGrass_43
+  - first:
+      213: 6791854979799304371
+    second: REGENERATE_foregroundGrass_44
+  - first:
+      213: -5660134474867504307
+    second: REGENERATE_foregroundGrass_45
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +179,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -125,7 +263,301 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: foregroundGrass
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 736
+        width: 200
+        height: 261
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d7cc53d81e7db9f0800000000000000
+      internalID: -451065742576793642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REGENERATE_foregroundGrass_2
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 669
+        width: 118
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c3c5849873b4d0f0800000000000000
+      internalID: -1093051479074946107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REGENERATE_foregroundGrass_3
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 634
+        width: 307
+        height: 167
+      alignment: 9
+      pivot: {x: 0.47684643, y: 0.53837746}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b03d34caa776d130800000000000000
+      internalID: 3591189328195039417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REGENERATE_foregroundGrass_10
+      rect:
+        serializedVersion: 2
+        x: 1730
+        y: 662
+        width: 84
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 793cac3d2805943b0800000000000000
+      internalID: -5527798544791321705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REGENERATE_foregroundGrass_11
+      rect:
+        serializedVersion: 2
+        x: 1819
+        y: 659
+        width: 77
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 621cbc59bc2ecaef0800000000000000
+      internalID: -95452128062226138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REGENERATE_foregroundGrass_13
+      rect:
+        serializedVersion: 2
+        x: 2155
+        y: 631
+        width: 310
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7750ddb3319f659f0800000000000000
+      internalID: -479922449264343689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REGENERATE_foregroundGrass_16
+      rect:
+        serializedVersion: 2
+        x: 2462
+        y: 778
+        width: 98
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e66071536db4bd70800000000000000
+      internalID: 9058072984814642914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REGENERATE_foregroundGrass_21
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 511
+        width: 140
+        height: 236
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e119f05e178cd230800000000000000
+      internalID: 3664952761050010086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REGENERATE_foregroundGrass_22
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 498
+        width: 246
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f88f8db1255e93e10800000000000000
+      internalID: 2178024035627628687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REGENERATE_foregroundGrass_23
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 606
+        width: 121
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c23b9c0000c466740800000000000000
+      internalID: 5144883187214299948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REGENERATE_foregroundGrass_27
+      rect:
+        serializedVersion: 2
+        x: 1469
+        y: 639
+        width: 264
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf8cf058b2fc7a580800000000000000
+      internalID: -8815849959731508997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REGENERATE_foregroundGrass_34
+      rect:
+        serializedVersion: 2
+        x: 1900
+        y: 643
+        width: 252
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e09ac0e0a588e8fe0800000000000000
+      internalID: -1184859731587716850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REGENERATE_foregroundGrass_39
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 537
+        width: 194
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aafd90fe066cc5b50800000000000000
+      internalID: 6583354874938384298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: REGENERATE_foregroundGrass_40
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 539
+        width: 100
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0860f0786885f2b0800000000000000
+      internalID: -5551380983511488502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
