@@ -10,6 +10,7 @@ public class WindowText : MonoBehaviour
     public float typeSpeed = 0.05f;
     public float timeDivisor = 30;
     public GameObject next;
+    public GameObject toggler;
 
     [SerializeField]
     int pos;
@@ -22,8 +23,13 @@ public class WindowText : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (toggler == null)
+        {
+            toggler = this.gameObject;
+        }
         textmesh = GetComponent<TextMeshProUGUI>();
         StartCoroutine(typeLoop());
+        
     }
 
     int seeknext(string a, int start, string tok)
@@ -124,7 +130,6 @@ public class WindowText : MonoBehaviour
                         StartCoroutine(swivelCarat());
                         StartCoroutine(userInput());
                         yield break;
-                        break;
 
                 }
                 offset += endchar;
@@ -139,11 +144,11 @@ public class WindowText : MonoBehaviour
                 {
                     if(curPut[combo+2]=='%')
                        {
-                        this.gameObject.SetActive(false);
+                        toggler.SetActive(false);
                         break;
                        }
                     yield return new WaitForSeconds(1.0f);
-                    Destroy(gameObject);
+                    Destroy(toggler);
                     if (next != null)
                     {
                         next.SetActive(true);
@@ -160,6 +165,7 @@ public class WindowText : MonoBehaviour
 
         }
 
+     
     }
 
 
@@ -209,9 +215,10 @@ public class WindowText : MonoBehaviour
 
     public void Inject(string a)
     {
+        print("received");
         curPut = a;
         rawShown = "";
-        StopAllCoroutines();
+        StopCoroutine(typeLoop());
         StartCoroutine(typeLoop());
     }
     

@@ -6,16 +6,25 @@ public class TextInjector : MonoBehaviour
 {
 
     [MultilineAttribute]
-    public string curPut = "";
+    public string text = "";
 
     public GameObject textfield;
 
-    private void Start()
+
+    public void Start()
     {
-        textfield.SetActive(true);
-        var a = textfield.GetComponent<WindowText>();
-        a.Inject(curPut);
-        this.gameObject.SetActive(false);
     }
 
+
+    public void SubmitText()
+    {
+        var a = textfield.GetComponent<WindowText>();
+        a.toggler.SetActive(true);
+        a.Inject(text);
+    }
+
+
+
+
+    
 }
