@@ -64,7 +64,7 @@ public class DManager : MonoBehaviour
 
     IEnumerator WaitForLastMessageDone()
     {
-        yield return new WaitUntil(() => EDex >=2 && FDex >= 2);
+        yield return new WaitUntil(() => EDex >=3 && FDex >= 3);
         yield return new WaitUntil(() => WindowText.isDone ==true);
         FinishDialog.GetComponent<TextInjector>().SubmitText();
     }

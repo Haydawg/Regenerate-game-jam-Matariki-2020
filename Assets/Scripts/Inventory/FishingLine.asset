@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: dfb9984d-d052-4771-bfcd-72ec34799af7
   name: Fishing Line
-  sprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+  sprite: {fileID: 21300000, guid: 7e18670c1cc2131459727da497c9eb3d, type: 3}
   stackLimit: 1
   item: {fileID: -8925922269945367502, guid: 45424f7a9b594704a9f7f460106dc93c, type: 3}
