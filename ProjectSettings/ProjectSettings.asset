@@ -613,11 +613,11 @@ PlayerSettings:
   m_MobileRenderingPath: 1
   metroPackageName: Template_3D
   metroPackageVersion: 
-  metroCertificatePath: 
+  metroCertificatePath: C:\Users\doofe\Desktop\Regenerate Game Jam\Regenerate-game-jam-Matariki-2020\Regenerate-game-jam-Matariki-2020\Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
+  metroCertificateSubject: DefaultCompany
+  metroCertificateIssuer: DefaultCompany
+  metroCertificateNotAfter: 00fcc63f57a2d901
   metroApplicationDescription: Template_3D
   wsaImages: {}
   metroTileShortName: 

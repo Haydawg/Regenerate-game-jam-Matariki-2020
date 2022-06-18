@@ -8,7 +8,7 @@ public class SimpleSceneTransition : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SceneManager.LoadScene("Hayden Test scene");
+        SceneManager.LoadScene("Luke Test Scene");
     }
 
     

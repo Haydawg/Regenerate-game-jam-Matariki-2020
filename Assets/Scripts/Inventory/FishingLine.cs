@@ -23,6 +23,12 @@ public class FishingLine : Item
     public override void UseItem(Vector3 targetPos, IItemInteraction interaction)
     {
         currentFish = interaction as Puddle_Script;
+        if (currentFish.isFish == false)
+        {
+            GameObject.Find("FailDialog").GetComponent<TextInjector>().SubmitText();
+            CastLine(targetPos, false);
+            return;
+        }
         if (Vector3.Distance(PlayerController.Instance.transform.position, targetPos) < distTofish)
         {
             CastLine(targetPos);
@@ -32,12 +38,15 @@ public class FishingLine : Item
             Debug.Log("Fish is too Far");
 
     }
-    void CastLine(Vector3 targetPos)
+    void CastLine(Vector3 targetPos,bool dogame=true)
     {
         GameObject line = Instantiate(linePrefab, PlayerController.Instance.transform);
         line.GetComponent<Rigidbody>().velocity = ((targetPos - PlayerController.Instance.transform.position) * 2);
-        var game = Instantiate(GameManager.Instance.minigame);
-        game.GetComponent<BarMinigameScript>().isFish = true;
+        if (dogame)
+        {
+            var game = Instantiate(GameManager.Instance.minigame);
+            game.GetComponent<BarMinigameScript>().isFish = true;
+        }
 
     }
 

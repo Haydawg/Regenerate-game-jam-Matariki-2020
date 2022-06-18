@@ -8,8 +8,11 @@ public class DManager : MonoBehaviour
     public List<GameObject> fishdialogs;
     public List<GameObject> eeldialogs;
     public GameObject FailDialog;
+    public GameObject FinishDialog;
     public GameObject EelImage;
     public GameObject FishImage;
+    private GameObject diag;
+
 
     // Start is called before the first frame update
     private int FDex = 0;
@@ -19,6 +22,7 @@ public class DManager : MonoBehaviour
         BarMinigameScript.OnFish += FishCondition;
         BarMinigameScript.OnEel += EelCondition;
         BarMinigameScript.OnFail += FailCondition;
+        StartCoroutine(WaitForLastMessageDone());
     }
 
     void FailCondition()
@@ -28,7 +32,6 @@ public class DManager : MonoBehaviour
 
     void FishCondition()
     {
-        print("Fish caught");
         fishdialogs[FDex].GetComponent<TextInjector>().SubmitText();
         FDex += 1;
         StartCoroutine(ShowFish());
@@ -41,11 +44,12 @@ public class DManager : MonoBehaviour
         StartCoroutine(ShowEel());
     }
 
+ 
+
     IEnumerator ShowEel()
     {
         EelImage.SetActive(true);
-        var a = GameObject.Find("DiagHolder");
-        yield return new WaitUntil(() => a.activeInHierarchy == false);
+        yield return new WaitUntil(() => WindowText.isDone == true);
         EelImage.SetActive(false);
     }
        
@@ -53,9 +57,16 @@ public class DManager : MonoBehaviour
     IEnumerator ShowFish()
     {
         FishImage.SetActive(true);
-        var a = GameObject.Find("DiagHolder");
-        yield return new WaitUntil(() => a.activeInHierarchy == false);
+        yield return new WaitUntil(() => WindowText.isDone==true);
         FishImage.SetActive(false);
+    }
+
+
+    IEnumerator WaitForLastMessageDone()
+    {
+        yield return new WaitUntil(() => EDex >=2 && FDex >= 2);
+        yield return new WaitUntil(() => WindowText.isDone ==true);
+        FinishDialog.GetComponent<TextInjector>().SubmitText();
     }
     
 }

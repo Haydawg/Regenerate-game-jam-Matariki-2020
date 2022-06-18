@@ -23,6 +23,12 @@ public class Spear : Item
     public override void UseItem(Vector3 targetPos, IItemInteraction interaction)
     {
         currentFish = interaction as Puddle_Script;
+        if (currentFish.isFish)
+        {
+            GameObject.Find("FailDialog").GetComponent<TextInjector>().SubmitText();
+            ThrowSpear(targetPos, false);
+            return;
+        }
         if (Vector3.Distance(PlayerController.Instance.transform.position, targetPos) < distTofish)
         {
             ThrowSpear(targetPos);
@@ -32,15 +38,18 @@ public class Spear : Item
             Debug.Log("Fish is too Far");
 
     }
-    void ThrowSpear(Vector3 targetPos)
+    void ThrowSpear(Vector3 targetPos,bool dogame = true)
     {
         GameObject spear = Instantiate(spearPrefab);
         spear.transform.position = PlayerController.Instance.transform.position;
         Vector3 toDir = (targetPos - PlayerController.Instance.transform.position) * 2;
         spear.transform.rotation = Quaternion.FromToRotation(Vector3.up, toDir);
         spear.transform.GetChild(0).GetComponent<Rigidbody>().velocity = toDir;
-        var game = Instantiate(GameManager.Instance.minigame);
-        game.GetComponent<BarMinigameScript>().isFish = false;
+        if (dogame)
+        {
+            var game = Instantiate(GameManager.Instance.minigame);
+            game.GetComponent<BarMinigameScript>().isFish = false;
+        }
 
 
     }

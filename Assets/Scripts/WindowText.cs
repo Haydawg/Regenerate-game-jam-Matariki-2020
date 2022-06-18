@@ -12,6 +12,8 @@ public class WindowText : MonoBehaviour
     public GameObject next;
     public GameObject toggler;
 
+    public static bool isDone;
+
     [SerializeField]
     int pos;
 
@@ -29,6 +31,7 @@ public class WindowText : MonoBehaviour
         }
         textmesh = GetComponent<TextMeshProUGUI>();
         StartCoroutine(typeLoop());
+        isDone = false;
         
     }
 
@@ -145,9 +148,11 @@ public class WindowText : MonoBehaviour
                     if(curPut[combo+2]=='%')
                        {
                         toggler.SetActive(false);
+                        isDone = true;
                         break;
                        }
                     yield return new WaitForSeconds(1.0f);
+                    isDone = true;
                     Destroy(toggler);
                     if (next != null)
                     {
@@ -218,6 +223,7 @@ public class WindowText : MonoBehaviour
         print("received");
         curPut = a;
         rawShown = "";
+        isDone = false;
         StopCoroutine(typeLoop());
         StartCoroutine(typeLoop());
     }

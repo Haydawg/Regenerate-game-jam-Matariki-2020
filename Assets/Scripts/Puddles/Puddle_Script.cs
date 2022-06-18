@@ -9,6 +9,9 @@ public class Puddle_Script : MonoBehaviour, IItemInteraction
     [SerializeField]
     List<Item> items;
     public bool isHooked;
+    public bool isFish;
+
+    private GameObject silhouette;
     IEnumerator MovementStateMachine()
     {
         WantedTorch = null;
@@ -50,11 +53,13 @@ public class Puddle_Script : MonoBehaviour, IItemInteraction
     {
         StartCoroutine("MovementStateMachine");
         StartCoroutine("TorchStateMachine");
+        silhouette = transform.GetChild(0).gameObject;
     }
 
     // Update is called once per frame
     void Update()
     {
+        silhouette.transform.Rotate(new Vector3(0, 0, 90), 0.02f);
         if (!isHooked)
         {
             if (WantedTorch == null)
