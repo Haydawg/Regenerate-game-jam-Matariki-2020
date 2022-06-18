@@ -14,8 +14,14 @@ public class Puddle_Script : MonoBehaviour, IItemInteraction
     private GameObject silhouette;
     IEnumerator MovementStateMachine()
     {
-        WantedTorch = null;
-        HorizontalDirection = Random.insideUnitCircle.normalized * 0.002f;
+
+        Vector2 newdir = Random.insideUnitCircle.normalized * 0.002f;
+        if (Random.value < 0.4f)
+        {
+            WantedTorch = null;
+
+        }
+        HorizontalDirection = newdir;
         yield return new WaitForSeconds(Random.value * 4);
         StartCoroutine("MovementStateMachine");
     }

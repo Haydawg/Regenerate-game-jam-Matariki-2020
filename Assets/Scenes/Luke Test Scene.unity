@@ -293,7 +293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnSpeed: 10
-  height: 1.5
+  height: 2.5
   distance: 5
 --- !u!1001 &303356386
 PrefabInstance:

@@ -149,15 +149,13 @@ public class WindowText : MonoBehaviour
                        {
                         toggler.SetActive(false);
                         isDone = true;
+                        if (next != null) { next.SetActive(true); }
                         break;
                        }
                     yield return new WaitForSeconds(1.0f);
                     isDone = true;
                     Destroy(toggler);
-                    if (next != null)
-                    {
-                        next.SetActive(true);
-                    }
+                    if (next != null) { next.SetActive(true); }
                     break;
                 }
             }
