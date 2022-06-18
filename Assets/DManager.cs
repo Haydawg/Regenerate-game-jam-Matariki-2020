@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DManager : MonoBehaviour
 {
@@ -67,6 +68,9 @@ public class DManager : MonoBehaviour
         yield return new WaitUntil(() => EDex >=3 && FDex >= 3);
         yield return new WaitUntil(() => WindowText.isDone ==true);
         FinishDialog.GetComponent<TextInjector>().SubmitText();
+        yield return new WaitUntil(() => WindowText.isDone == true);
+        SceneManager.LoadScene("StartScene");
+
     }
     
 }

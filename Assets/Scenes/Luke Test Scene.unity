@@ -1570,7 +1570,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Be mindful of your surroundings and how your actions affect them.{i0}Take
-    only what you need and always give back^6, even if just by thinking and thanking.
+    only what you need and always give back^6, even if just by thinking and thanking.{i0}/%%
   textfield: {fileID: 1788560031}
 --- !u!1 &1950845860
 GameObject:
