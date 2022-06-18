@@ -7,11 +7,14 @@ public class PlayerController : MonoBehaviour
     CharacterController controller;
     Vector3 playerVelocity;
     int direction;
+    int lastDirection = 4;
 
     [SerializeField]
     Animator animator;
     [SerializeField]
     float speed;
+
+    
 
     protected static PlayerController _Instance = null;
     public static PlayerController Instance
@@ -63,6 +66,15 @@ public class PlayerController : MonoBehaviour
             direction = 6;
         else if (x < 0 & z > 0)
             direction = 7;
+
+        if (direction != lastDirection)
+        {
+            animator.ResetTrigger("Change Dir");
+            animator.SetTrigger("Change Dir");
+            lastDirection = direction;
+        }
+        else
+            lastDirection = direction;
 
         //Set animation variables
         animator.SetBool("Is Moving", (x != 0 | z != 0));
