@@ -11,7 +11,11 @@ public class Puddle_Script : MonoBehaviour, IItemInteraction
     public bool isHooked;
     public bool isFish;
 
+
+
     private GameObject silhouette;
+    public Sprite eel;
+    public Sprite fish;
     IEnumerator MovementStateMachine()
     {
 
@@ -60,6 +64,14 @@ public class Puddle_Script : MonoBehaviour, IItemInteraction
         StartCoroutine("MovementStateMachine");
         StartCoroutine("TorchStateMachine");
         silhouette = transform.GetChild(0).gameObject;
+        if (isFish)
+        {
+            silhouette.GetComponent<SpriteRenderer>().sprite = fish;
+        }
+        else
+        {
+            silhouette.GetComponent<SpriteRenderer>().sprite = eel;
+        }
     }
 
     // Update is called once per frame

@@ -135,6 +135,8 @@ MonoBehaviour:
   - {fileID: -5881338548568958142, guid: 75b61947afa049849aaa4713e5458d6b, type: 3}
   isHooked: 0
   isFish: 0
+  eel: {fileID: 21300000, guid: cdcfd3be51fb36d44a3dc2158443afbf, type: 3}
+  fish: {fileID: 21300000, guid: 273355993ab4695419d8b3cb78dfe874, type: 3}
 --- !u!65 &8401121451113381619
 BoxCollider:
   m_ObjectHideFlags: 0
