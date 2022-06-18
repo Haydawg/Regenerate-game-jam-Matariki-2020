@@ -43,3 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 745db08d852348e478c5b71e1afd72d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spearPrefab: {fileID: 5969128821417465251, guid: 87b5175dc6b67684aa30f1bb3b27df14, type: 3}
+  distTofish: 5

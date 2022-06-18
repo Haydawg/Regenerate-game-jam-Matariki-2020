@@ -5,14 +5,17 @@ using UnityEngine;
 public class DManager : MonoBehaviour
 {
 
-    public List<GameObject> dialogs;
+    public List<GameObject> fishdialogs;
+    public List<GameObject> eeldialogs;
     public GameObject FailDialog;
 
     // Start is called before the first frame update
-    private int DDex = 0;
+    private int FDex = 0;
+    private int EDex = 0;
     void Start()
     {
-        BarMinigameScript.OnSuccess += MainCondition;
+        BarMinigameScript.OnFish += FishCondition;
+        BarMinigameScript.OnEel += EelCondition;
         BarMinigameScript.OnFail += FailCondition;
     }
 
@@ -21,9 +24,15 @@ public class DManager : MonoBehaviour
         FailDialog.GetComponent<TextInjector>().SubmitText();
     }
 
-    void MainCondition()
+    void FishCondition()
     {
-        dialogs[DDex].GetComponent<TextInjector>().SubmitText();
-        DDex += 1;
+        fishdialogs[FDex].GetComponent<TextInjector>().SubmitText();
+        FDex += 1;
+    }
+
+    void EelCondition()
+    {
+        eeldialogs[EDex].GetComponent<TextInjector>().SubmitText();
+        EDex += 1;
     }
 }

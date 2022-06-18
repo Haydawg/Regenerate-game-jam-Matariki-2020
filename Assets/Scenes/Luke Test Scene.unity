@@ -874,6 +874,59 @@ MonoBehaviour:
   text: "{s0.03}Torrentfish, Panoko in M\u0101ori, prefers fast-moving streams with
     gravels and cobbles to anchor itself under.{i0}/%%\r\n"
   textfield: {fileID: 1788560031}
+--- !u!1 &1153817767
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1153817768}
+  - component: {fileID: 1153817769}
+  m_Layer: 5
+  m_Name: Eel2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1153817768
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153817767}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4121910777612658366}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1153817769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153817767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85641a614f4228d4f9fc2da5319a1300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "{s0.03}Longfin Eels^6, locally known as tuna^6, are the largest freshwater
+    eels in New Zealand^6,&and are born measuring only 1 millimeter in length but
+    as adults they can reach up to 2 meters.\r\n{i0}If the eel populations drop too
+    low here^6, a r\u0101hui might be put into place to prevent further loss.{i0}/%%"
+  textfield: {fileID: 1788560031}
 --- !u!223 &1186554143 stripped
 Canvas:
   m_CorrespondingSourceObject: {fileID: 4121910776444061602, guid: 3c610f70f3aeacd479436f85115149f7, type: 3}
@@ -931,6 +984,59 @@ MonoBehaviour:
 
 '
   textfield: {fileID: 1788560031}
+--- !u!1 &1248413542
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1248413543}
+  - component: {fileID: 1248413544}
+  m_Layer: 5
+  m_Name: Eel1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1248413543
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248413542}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4121910777612658366}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1248413544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248413542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85641a614f4228d4f9fc2da5319a1300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: '{s0.03}Looks like a Longfin Eel! Use the spear in your inventory to catch
+    it.{i0}/%%
+
+'
+  textfield: {fileID: 1788560031}
 --- !u!1 &1286100195
 GameObject:
   m_ObjectHideFlags: 0
@@ -980,6 +1086,57 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: Oh no! It escaped.{i0}/%%
+  textfield: {fileID: 1788560031}
+--- !u!1 &1290078954
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1290078955}
+  - component: {fileID: 1290078956}
+  m_Layer: 5
+  m_Name: Eel3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1290078955
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290078954}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4121910777612658366}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1290078956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290078954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85641a614f4228d4f9fc2da5319a1300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "{i0}The Longfin Eel^6, tuna in M\u0101ori^6, can travel and breathe on land
+    for up to 2 days through its skin.{i0}/%%"
   textfield: {fileID: 1788560031}
 --- !u!1001 &1487733124
 PrefabInstance:
@@ -1199,10 +1356,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 416a04897043fe849b5eaaa7dad32f6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogs:
+  fishdialogs:
   - {fileID: 1244946334}
   - {fileID: 1109058106}
   - {fileID: 1054582533}
+  eeldialogs:
+  - {fileID: 1248413542}
+  - {fileID: 1153817767}
+  - {fileID: 1290078954}
   FailDialog: {fileID: 1286100195}
 --- !u!1001 &1997174048
 PrefabInstance:

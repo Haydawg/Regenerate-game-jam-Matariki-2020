@@ -9,12 +9,16 @@ public class BarMinigameScript : MonoBehaviour
     public GameObject MainSlider;
     public GameObject L;
     public GameObject R;
+    public bool isFish = true;
     float gamepos;
     float leftSpot;
     float rightSpot;
 
-    public static event HandleSuccess OnSuccess;
-    public delegate void HandleSuccess();
+    public static event HandleOnFish OnFish;
+    public delegate void HandleOnFish();
+    public static event HandleOnEel OnEel;
+    public delegate void HandleOnEel();
+
     public static event HandleFail OnFail;
     public delegate void HandleFail();
     // Start is called before the first frame update
@@ -48,7 +52,14 @@ public class BarMinigameScript : MonoBehaviour
     }
     public void Succeess()
     {
-        OnSuccess.Invoke();
+        if (isFish)
+        {
+            OnFish.Invoke();
+        }else
+        {
+            print("eef");
+            OnEel.Invoke();
+        }
         Debug.Log("Caught fish");
         GameObject.Destroy(gameObject, 0.2f);
 

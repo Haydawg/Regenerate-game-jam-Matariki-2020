@@ -19,14 +19,16 @@ public class Puddle_Script : MonoBehaviour, IItemInteraction
 
     private void OnEnable()
     {
-        BarMinigameScript.OnSuccess += Catch;
+        BarMinigameScript.OnFish += Catch;
+        BarMinigameScript.OnEel += Catch;
         BarMinigameScript.OnFail += Release;
 
     }
 
     private void OnDisable()
     {
-        BarMinigameScript.OnSuccess -= Catch;
+        BarMinigameScript.OnFish -= Catch;
+        BarMinigameScript.OnEel -= Catch;
         BarMinigameScript.OnFail -= Release;
     }
 
