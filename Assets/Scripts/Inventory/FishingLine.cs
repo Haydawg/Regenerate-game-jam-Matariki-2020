@@ -36,8 +36,8 @@ public class FishingLine : Item
     {
         GameObject line = Instantiate(linePrefab, PlayerController.Instance.transform);
         line.GetComponent<Rigidbody>().velocity = ((targetPos - PlayerController.Instance.transform.position) * 2);
-        Instantiate(GameManager.Instance.minigame);
-
+        var game = Instantiate(GameManager.Instance.minigame);
+        game.GetComponent<BarMinigameScript>().isFish = true;
 
     }
 

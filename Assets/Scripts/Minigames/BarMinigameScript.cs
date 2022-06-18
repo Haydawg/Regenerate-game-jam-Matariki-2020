@@ -9,7 +9,7 @@ public class BarMinigameScript : MonoBehaviour
     public GameObject MainSlider;
     public GameObject L;
     public GameObject R;
-    public bool isFish = true;
+    public bool isFish;
     float gamepos;
     float leftSpot;
     float rightSpot;
@@ -57,7 +57,6 @@ public class BarMinigameScript : MonoBehaviour
             OnFish.Invoke();
         }else
         {
-            print("eef");
             OnEel.Invoke();
         }
         Debug.Log("Caught fish");
