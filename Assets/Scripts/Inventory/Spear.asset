@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 9e2906db-3422-4e92-88df-c7d1fc224863
   name: Spear
-  sprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+  sprite: {fileID: 21300000, guid: 175d4cfcfd4f632439d9d0b430aa458e, type: 3}
   stackLimit: 1
   item: {fileID: -5881338548568958142, guid: 75b61947afa049849aaa4713e5458d6b, type: 3}
