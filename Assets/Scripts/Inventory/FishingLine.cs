@@ -27,7 +27,7 @@ public class FishingLine : Item
         currentFish = interaction as Puddle_Script;
         if (currentFish.isFish == false)
         {
-            GameObject.Find("FailDialog").GetComponent<TextInjector>().SubmitText();
+            GameObject.Find("ed").GetComponent<TextInjector>().SubmitText();
             CastLine(targetPos, false);
             return;
         }

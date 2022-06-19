@@ -21,7 +21,10 @@ public class TextInjector : MonoBehaviour
         var a = textfield.GetComponent<WindowText>();
         a.toggler.SetActive(true);
         a.Inject(text);
+
     }
+
+   
 
 
 

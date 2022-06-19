@@ -225,5 +225,7 @@ public class WindowText : MonoBehaviour
         StopCoroutine(typeLoop());
         StartCoroutine(typeLoop());
     }
+
+    
     
 }

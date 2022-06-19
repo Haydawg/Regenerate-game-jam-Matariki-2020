@@ -8,17 +8,25 @@ public class GameExit : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.SetActive(false);
+        StartCoroutine(WaitForEscape());
     }
 
-    // Update is called once per frame
-    void Update()
+    
+
+    IEnumerator WaitForEscape()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-            gameObject.SetActive(true);
+        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Escape));
+        this.transform.GetChild(0).gameObject.SetActive(true);
     }
-    public void RetrunToMenu()
+
+    public void Return()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void CloseMenu()
+    {
+        this.transform.GetChild(0).gameObject.SetActive(false);
+        StartCoroutine(WaitForEscape());
     }
 }

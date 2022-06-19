@@ -28,7 +28,7 @@ public class Spear : Item
         currentFish = interaction as Puddle_Script;
         if (currentFish.isFish)
         {
-            GameObject.Find("FailDialog").GetComponent<TextInjector>().SubmitText();
+            GameObject.Find("fd").GetComponent<TextInjector>().SubmitText();
             ThrowSpear(targetPos, false);
             return;
         }
