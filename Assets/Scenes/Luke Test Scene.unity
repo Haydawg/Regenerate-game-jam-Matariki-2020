@@ -1198,9 +1198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85641a614f4228d4f9fc2da5319a1300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: '{s0.03}Looks like a Torrentfish! Use your fishing rod to catch it.{i0}/%%
-
-'
+  text: '{s0.03}Looks like a Torrentfish!{i0}/%%'
   textfield: {fileID: 1788560031}
 --- !u!1 &1248413542
 GameObject:
@@ -1250,10 +1248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85641a614f4228d4f9fc2da5319a1300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: '{s0.03}Looks like a Longfin Eel! Use the spear in your inventory to catch
-    it.{i0}/%%
-
-'
+  text: '{s0.03}Looks like a Longfin Eel!{i0}/%%'
   textfield: {fileID: 1788560031}
 --- !u!1 &1286100195
 GameObject:
@@ -2305,6 +2300,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4121910776441852642, guid: 3c610f70f3aeacd479436f85115149f7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4121910776444061597, guid: 3c610f70f3aeacd479436f85115149f7, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2400,6 +2399,10 @@ PrefabInstance:
     - target: {fileID: 4121910776444061606, guid: 3c610f70f3aeacd479436f85115149f7, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121910776444061606, guid: 3c610f70f3aeacd479436f85115149f7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c610f70f3aeacd479436f85115149f7, type: 3}
@@ -2718,6 +2721,10 @@ PrefabInstance:
     - target: {fileID: 7248501042684735500, guid: 228461a8c76b5e54d8f68908a127a383, type: 3}
       propertyPath: m_Name
       value: Inventory
+      objectReference: {fileID: 0}
+    - target: {fileID: 7248501042684735500, guid: 228461a8c76b5e54d8f68908a127a383, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 228461a8c76b5e54d8f68908a127a383, type: 3}
