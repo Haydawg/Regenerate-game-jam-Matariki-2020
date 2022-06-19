@@ -547,6 +547,21 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!206 &-929911508518563953
+BlendTree:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Blend Tree
+  m_Childs: []
+  m_BlendParameter: Blend
+  m_BlendParameterY: Blend
+  m_MinThreshold: 0
+  m_MaxThreshold: 1
+  m_UseAutomaticThresholds: 1
+  m_NormalizedBlendValues: 0
+  m_BlendType: 0
 --- !u!1102 &-613036852708827713
 AnimatorState:
   serializedVersion: 6
@@ -763,10 +778,10 @@ AnimatorStateMachine:
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 680, y: 230, z: 0}
-  m_EntryPosition: {x: 140, y: 580, z: 0}
+  m_EntryPosition: {x: 170, y: -70, z: 0}
   m_ExitPosition: {x: 1400, y: -20, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: 2899360803778788387}
+  m_DefaultState: {fileID: 5486472218582492009}
 --- !u!1102 &1774354465694103015
 AnimatorState:
   serializedVersion: 6

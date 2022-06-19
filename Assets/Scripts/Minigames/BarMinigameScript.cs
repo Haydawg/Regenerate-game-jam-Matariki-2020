@@ -21,6 +21,11 @@ public class BarMinigameScript : MonoBehaviour
 
     public static event HandleFail OnFail;
     public delegate void HandleFail();
+
+    [SerializeField]
+    AudioSource audio;
+    [SerializeField]
+    AudioClip[] clips;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +39,12 @@ public class BarMinigameScript : MonoBehaviour
         L.GetComponent<Slider>().value = leftSpot;
         R.GetComponent<Slider>().value = rightSpot;
 
+        if(isFish)
+        {
+            audio.clip = clips[1];
+            audio.Play();
+        }
+
     }
 
     // Update is called once per frame
@@ -43,6 +54,9 @@ public class BarMinigameScript : MonoBehaviour
         MainSlider.GetComponent<Slider>().value = gamepos;
         if(Input.GetKeyDown(KeyCode.Space))
         {
+            if (!isFish)
+                audio.clip = clips[0];
+                audio.Play();
             if (leftSpot <= gamepos && gamepos <= rightSpot)
                 Succeess();
             else
@@ -59,15 +73,19 @@ public class BarMinigameScript : MonoBehaviour
         {
             OnEel.Invoke();
         }
-        Debug.Log("Caught fish");
-        GameObject.Destroy(gameObject, 0.2f);
+        StartCoroutine(WaitAndDestroy());
 
     }
     public void Failure()
     {
         OnFail.Invoke();
         Debug.Log("Fish escaped");
-        GameObject.Destroy(gameObject, 0.2f);
+        StartCoroutine(WaitAndDestroy());
 
+    }
+    IEnumerator WaitAndDestroy()
+    {
+        yield return new WaitForSeconds(0.5f);
+        GameObject.Destroy(gameObject, 0.2f);
     }
 }

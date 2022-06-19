@@ -553,6 +553,10 @@ MonoBehaviour:
   L: {fileID: 0}
   R: {fileID: 0}
   isFish: 0
+  audio: {fileID: 3060145490627147839}
+  clips:
+  - {fileID: 8300000, guid: 92f9b6657e0dc544b8e43ab8895c248b, type: 3}
+  - {fileID: 8300000, guid: 2c663417fdc8b0b4dbca2475b8468978, type: 3}
 --- !u!82 &3060145490627147839
 AudioSource:
   m_ObjectHideFlags: 0
@@ -563,7 +567,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2c663417fdc8b0b4dbca2475b8468978, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -571,7 +575,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 256
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
