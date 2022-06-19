@@ -9,6 +9,9 @@ public class Spear : Item
     [SerializeField]
     float distTofish;
     Puddle_Script currentFish;
+
+    [SerializeField]
+    AudioClip audio;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +44,7 @@ public class Spear : Item
     void ThrowSpear(Vector3 targetPos,bool dogame = true)
     {
         GameObject spear = Instantiate(spearPrefab);
+        PlayerController.Instance.itemAudio.PlayOneShot(audio);
         spear.transform.position = PlayerController.Instance.transform.position;
         Vector3 toDir = (targetPos - PlayerController.Instance.transform.position) * 2;
         spear.transform.rotation = Quaternion.FromToRotation(Vector3.up, toDir);

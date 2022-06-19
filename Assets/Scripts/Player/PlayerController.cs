@@ -15,7 +15,8 @@ public class PlayerController : MonoBehaviour
     float speed;
     [SerializeField]
     AudioSource audio;
-    
+
+    public AudioSource itemAudio;
 
     protected static PlayerController _Instance = null;
     public static PlayerController Instance

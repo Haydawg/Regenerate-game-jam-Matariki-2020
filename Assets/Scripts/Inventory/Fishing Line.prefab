@@ -45,3 +45,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   linePrefab: {fileID: 3384130085921730595, guid: a20136414b57ea84684509c27a29bf52, type: 3}
   distTofish: 10
+  audio: {fileID: 8300000, guid: a8e35733ae8b71e46af074d260696977, type: 3}

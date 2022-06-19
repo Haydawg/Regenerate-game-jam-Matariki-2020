@@ -9,6 +9,8 @@ public class FishingLine : Item
     [SerializeField]
     float distTofish;
     Puddle_Script currentFish;
+    [SerializeField]
+    AudioClip audio;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,8 +42,13 @@ public class FishingLine : Item
     }
     void CastLine(Vector3 targetPos,bool dogame=true)
     {
-        GameObject line = Instantiate(linePrefab, PlayerController.Instance.transform);
-        line.GetComponent<Rigidbody>().velocity = ((targetPos - PlayerController.Instance.transform.position) * 2);
+        GameObject line = Instantiate(linePrefab);
+        PlayerController.Instance.itemAudio.PlayOneShot(audio);
+        line.transform.position = PlayerController.Instance.transform.position;
+        Vector3 toDir = (targetPos - PlayerController.Instance.transform.position) * 2;
+        line.transform.rotation = Quaternion.FromToRotation(Vector3.up, toDir);
+        line.transform.GetComponent<Rigidbody>().velocity = toDir;
+        
         if (dogame)
         {
             var game = Instantiate(GameManager.Instance.minigame);
