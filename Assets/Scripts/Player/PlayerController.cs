@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     CharacterController controller;
     Vector3 playerVelocity;
     int direction;
-    int lastDirection = 4;
+    int lastDirection = 0;
 
     [SerializeField]
     Animator animator;
