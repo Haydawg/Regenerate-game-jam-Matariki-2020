@@ -43,6 +43,7 @@ public class FishingLine : Item
     void CastLine(Vector3 targetPos,bool dogame=true)
     {
         GameObject line = Instantiate(linePrefab);
+        GameObject.Destroy(line, 12);
         PlayerController.Instance.itemAudio.PlayOneShot(audio);
         line.transform.position = PlayerController.Instance.transform.position;
         Vector3 toDir = (targetPos - PlayerController.Instance.transform.position) * 2;

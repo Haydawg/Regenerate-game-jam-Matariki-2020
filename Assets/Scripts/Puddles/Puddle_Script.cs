@@ -19,7 +19,7 @@ public class Puddle_Script : MonoBehaviour, IItemInteraction
     IEnumerator MovementStateMachine()
     {
 
-        Vector2 newdir = Random.insideUnitCircle.normalized * 0.002f;
+        Vector2 newdir = Random.insideUnitCircle.normalized * 0.02f;
         if (Random.value < 0.4f)
         {
             WantedTorch = null;
@@ -75,9 +75,9 @@ public class Puddle_Script : MonoBehaviour, IItemInteraction
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        silhouette.transform.Rotate(new Vector3(0, 0, 90), 0.02f);
+        silhouette.transform.Rotate(new Vector3(0, 0, 90), 0.5f);
         if (!isHooked)
         {
             if (WantedTorch == null)
@@ -86,7 +86,7 @@ public class Puddle_Script : MonoBehaviour, IItemInteraction
             }
             else
             {
-                transform.position = Vector3.Lerp(transform.position, WantedTorch.transform.position, 0.0006f);
+                transform.position = Vector3.Lerp(transform.position, WantedTorch.transform.position, 0.006f);
             }
         }
 

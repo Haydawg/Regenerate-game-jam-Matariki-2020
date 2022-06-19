@@ -44,6 +44,7 @@ public class Spear : Item
     void ThrowSpear(Vector3 targetPos,bool dogame = true)
     {
         GameObject spear = Instantiate(spearPrefab);
+        GameObject.Destroy(spear, 12);
         PlayerController.Instance.itemAudio.PlayOneShot(audio);
         spear.transform.position = PlayerController.Instance.transform.position;
         Vector3 toDir = (targetPos - PlayerController.Instance.transform.position) * 2;
