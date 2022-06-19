@@ -13,7 +13,8 @@ public class PlayerController : MonoBehaviour
     Animator animator;
     [SerializeField]
     float speed;
-
+    [SerializeField]
+    AudioSource audio;
     
 
     protected static PlayerController _Instance = null;
@@ -83,5 +84,10 @@ public class PlayerController : MonoBehaviour
         controller.Move(playerVelocity);
     }
 
+    public void Footstep()
+    {
+        audio.pitch = Random.Range(0.1f, 1);
+        audio.Play();
+    }
 
 }
